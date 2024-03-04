@@ -136,7 +136,7 @@ AFRAME.registerComponent("atoms", {
 
       //Create electron revolution animation entity
       var electronGroup = document.createElement("a-entity");
-      electronGroup.setAttribute("id", electron-group-${elementName});
+      electronGroup.setAttribute("id",`electron-group-${elementName}`);
       electronGroup.setAttribute("rotation", {
         x: 0,
         y: 0,
@@ -147,7 +147,7 @@ AFRAME.registerComponent("atoms", {
 
       electronGroup.setAttribute("animation", {
         property: "rotation",
-        to: 0 0 -360,
+        to: `0 0 -360`,
         loop: "true",
         dur: 3500,
         easing: "linear"
@@ -157,7 +157,7 @@ AFRAME.registerComponent("atoms", {
 
       //Create electron
       var electron = document.createElement("a-entity");
-      electron.setAttribute("id", electron-${elementName});
+      electron.setAttribute("id",`electron-${elementName}`);
       electron.setAttribute("geometry", {
         primitive: "sphere",
         radius: 0.02
@@ -171,6 +171,6 @@ AFRAME.registerComponent("atoms", {
       });
 
       electronGroup.appendChild(electron);
-    
+    }
   }
 });
